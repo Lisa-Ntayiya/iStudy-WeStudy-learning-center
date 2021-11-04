@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mainPage">
+   <children>
+      <AnchorPane prefHeight="545.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane prefHeight="30.0" prefWidth="800.0" style="-fx-background-color: black;">
+               <children>
+                  <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="770.0" onAction="#close" prefHeight="30.0" prefWidth="25.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#cf132c" glyphName="CLOSE" size="15" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="725.0" onAction="#minimize" prefHeight="30.0" prefWidth="25.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#25cf13" glyphName="MINUS" size="10" />
+                     </graphic>
+                  </JFXButton>
+                  <Label layoutX="355.0" text="Admin View" textFill="#67d71c">
+                     <font>
+                        <Font name="Gabriola" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <MenuBar layoutY="31.0" prefHeight="25.0" prefWidth="800.0" style="-fx-background-color: gray;">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="Close" mnemonicParsing="false" onAction="#onBack" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="About" mnemonicParsing="false" onAction="#onAbout" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <JFXTabPane layoutY="60.0" prefHeight="485.0" prefWidth="800.0">
+               <tabs>
+                  <Tab closable="false" style="-fx-background-color: #76D7C4;" text="Study Mathematics ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="603.0" style="-fx-background-color: #D0ECE7;">
+                           <children>
+                              <JFXButton fx:id="TutQuiz" contentDisplay="TOP" layoutX="60.0" layoutY="45.0" onAction="#onTut" prefHeight="110.0" prefWidth="190.0" text="Tutorials and Quizes">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#13ad74" glyphName="BOOKMARK" size="100" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Gabriola" size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="QuestP" contentDisplay="TOP" layoutX="60.0" layoutY="220.0" onAction="#onQuest" prefHeight="44.0" prefWidth="190.0" text="Question Papers">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#c73d26" glyphName="CLIPBOARD" size="100" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Gabriola" size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="Books" contentDisplay="TOP" layoutX="305.0" layoutY="48.0" onAction="#onBooks" prefHeight="152.0" prefWidth="190.0" text="Available Textbooks">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#e026c1" glyphName="BOOK" size="100" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Gabriola" size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="Grades" contentDisplay="TOP" layoutX="540.0" layoutY="45.0" onAction="#onGrades" prefHeight="45.0" prefWidth="190.0" text="My Grades">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#37699e" glyphName="TH" size="100" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Gabriola" size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXHamburger fx:id="hamburger" layoutX="752.0" layoutY="5.0" prefHeight="43.0" prefWidth="42.0">
+                                 <children>
+                                    <JFXDrawer fx:id="drawer" direction="RIGHT" prefHeight="44.0" prefWidth="42.0" />
+                                 </children>
+                              </JFXHamburger>
+                              <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="770.0" layoutY="420.0" onAction="#signOut">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#0e801c" fontSmoothingType="LCD" glyphName="CHEVRON_LEFT" size="15" wrappingWidth="16.0" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab closable="false" style="-fx-background-color: #AED6F1;" text="Study Physics">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="603.0" style="-fx-background-color: #D0ECE7;">
+                           <children>
+                              <JFXButton fx:id="TutQuiz1" contentDisplay="TOP" layoutX="60.0" layoutY="45.0" onAction="#onTut1" prefHeight="110.0" prefWidth="190.0" text="Tutorials and Quizes">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#13ad74" glyphName="BOOKMARK" size="100" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Gabriola" size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="QuestP1" contentDisplay="TOP" layoutX="60.0" layoutY="220.0" onAction="#onQuest1" prefHeight="44.0" prefWidth="190.0" text="Question Papers">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#c73d26" glyphName="CLIPBOARD" size="100" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Gabriola" size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="Books1" contentDisplay="TOP" layoutX="305.0" layoutY="48.0" onAction="#onBooks1" prefHeight="152.0" prefWidth="190.0" text="Available Textbooks">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#e026c1" glyphName="BOOK" size="100" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Gabriola" size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="Grades1" contentDisplay="TOP" layoutX="540.0" layoutY="45.0" onAction="#onGrades" prefHeight="45.0" prefWidth="190.0" text="My Grades">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#37699e" glyphName="TH" size="100" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Gabriola" size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXHamburger fx:id="hamburger1" layoutX="752.0" layoutY="5.0" prefHeight="43.0" prefWidth="42.0">
+                                 <children>
+                                    <JFXDrawer fx:id="drawer1" direction="RIGHT" prefHeight="44.0" prefWidth="42.0" />
+                                 </children>
+                              </JFXHamburger>
+                              <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="770.0" layoutY="420.0">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="POWER_OFF" size="15" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

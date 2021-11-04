@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: greenyellow;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewDoc">
+   <children>
+      <AnchorPane layoutX="1.0" prefHeight="700.0" prefWidth="1280.0">
+         <children>
+            <Label layoutX="502.0" layoutY="28.0" text="Available Math Tutorials">
+               <font>
+                  <Font name="Gabriola" size="48.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="Choose" layoutX="502.0" layoutY="86.0" prefHeight="39.0" prefWidth="191.0" promptText="Choose" />
+            <JFXButton fx:id="select" layoutX="715.0" layoutY="90.0" onAction="#onSelect" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: tomato;" text="Select" textFill="#0d0d0d">
+               <font>
+                  <Font name="Gabriola" size="18.0" />
+               </font></JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="1246.0" layoutY="3.0" onAction="#closeWindow">
+               <graphic>
+                  <FontAwesomeIconView fill="#ee3d11" glyphName="CLOSE" size="15" />
+               </graphic>
+            </JFXButton>
+            <Label contentDisplay="GRAPHIC_ONLY" layoutX="630.0" layoutY="6.0" onMouseDragged="#moveWindow" onMousePressed="#grabWindow" text="Label">
+               <graphic>
+                  <FontAwesomeIconView fill="#1fbf10" glyphName="ARROWS" size="20" />
+               </graphic>
+            </Label>
+            <ScrollPane layoutX="14.0" layoutY="137.0" prefHeight="550.0" prefWidth="1250.0">
+               <content>
+                  <TextArea fx:id="outputArea" editable="false" prefHeight="546.0" prefWidth="1247.0">
+                     <font>
+                        <Font name="Gabriola" size="18.0" />
+                     </font>
+                  </TextArea>
+               </content>
+            </ScrollPane>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="5.0" onAction="#signOut">
+               <graphic>
+                  <FontAwesomeIconView fill="#dd1a1a" glyphName="POWER_OFF" size="15" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="40.0" onAction="#back">
+               <graphic>
+                  <FontAwesomeIconView fill="#1ac4db" glyphName="CHEVRON_LEFT" size="15" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

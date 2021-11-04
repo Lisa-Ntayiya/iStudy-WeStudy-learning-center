@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="465.0" style="-fx-background-color: greenyellow;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Register">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="465.0" style="-fx-background-color: greenyellow;">
+         <children>
+            <Label alignment="CENTER" layoutX="177.0" layoutY="-62.0" prefHeight="80.0" prefWidth="464.0" text="Registery" textAlignment="CENTER" textFill="#323030" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Gabriola" size="48.0" />
+               </font>
+            </Label>
+            <Separator layoutX="140.0" layoutY="79.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <JFXTextField fx:id="username" focusColor="#1109ee" labelFloat="true" layoutX="80.0" layoutY="220.0" prefHeight="25.0" prefWidth="290.0" promptText="Username" unFocusColor="BLACK">
+               <font>
+                  <Font name="Gabriola" size="18.0" />
+               </font></JFXTextField>
+            <JFXButton fx:id="Recover" layoutX="188.0" layoutY="427.0" onAction="#onRecover" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: #58D68D;" text="Register" textFill="#151624">
+               <font>
+                  <Font name="Gabriola" size="18.0" />
+               </font></JFXButton>
+            <HBox layoutX="175.0" layoutY="104.0" prefHeight="105.0" prefWidth="115.0">
+               <children>
+                  <FontAwesomeIconView glyphName="USERS" size="100" wrappingWidth="126.14286041259766" />
+               </children>
+            </HBox>
+            <JFXPasswordField fx:id="pass" focusColor="#1109ee" layoutX="80.0" layoutY="293.0" prefHeight="25.0" prefWidth="290.0" promptText="Password">
+               <font>
+                  <Font name="Gabriola" size="18.0" />
+               </font></JFXPasswordField>
+            <JFXTextField fx:id="emePass" focusColor="#1109ee" layoutX="80.0" layoutY="350.0" prefHeight="25.0" prefWidth="290.0" promptText="Emergency Pass">
+               <font>
+                  <Font name="Gabriola" size="18.0" />
+               </font></JFXTextField>
+            <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="430.0" layoutY="5.0" onAction="#closeWindow">
+               <graphic>
+                  <FontAwesomeIconView fill="#ee4848" glyphName="CLOSE" size="15" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="420.0" layoutY="435.0" onAction="#goBack">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CHEVRON_LEFT" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
